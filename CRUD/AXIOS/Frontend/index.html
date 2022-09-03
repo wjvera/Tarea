@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD API REST AXIOS</title>
+</head>
+ 
+<body>
+
+  <h1>CRUD API REST AXIOS</h1>
+
+  <section class="crud">
+
+        <article>
+
+                <h2 class="crud-title">Agregar Estudiante</h2>
+
+                <form class="crud-form">
+
+                    <input type="text" name="innombre" placeholder="nombre" required>
+                    <br>
+                    <br>
+                    <input type="text" name="inapellido" placeholder="apellido" required>
+                    <br>
+                    <br>
+                    <input type="text" name="incarrera" placeholder="carrera" required>
+                    <br>
+                    <br>
+                    <input type="text" name="insemestre" placeholder="semestre" required>
+                    <br>
+                    <br>
+                    <input type="submit" value="Enviar">
+                    <input type="hidden" name="oculto">
+
+                </form>
+
+        </article>
+
+    <article>
+
+        <h2>Ver Estudiantes</h2>
+
+            <table class="crud-table">
+
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Carrera</th>
+                            <th>Semestre</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="mostrarTabla">
+                    
+                    </tbody>
+                
+            </table>
+
+    </article>
+
+  </section>
+
+  <template id="crud-template">
+
+      <tr>
+          <td class="nombre"></td>
+          <td class="apellido"></td>
+          <td class="carrera"></td>
+          <td class="semestre"></td>
+          <td>
+            <button class="edit">Editar</button>
+            <button class="delete">Eliminar</button>
+          </td>
+      </tr>
+  </template>
+
+  <br>
+  <br>
+  <footer>
+    © 2022 GitHub, Inc.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="axios.js"></script>
+
+</body>
+
+</html>

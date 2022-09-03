@@ -1,0 +1,61 @@
+{
+  "Estudiante": [
+    {
+      "id": 1351926678,
+      "nombre": "Diego",
+      "Apellido": "Vera",
+      "Carrera": "Ing. Sistemas",
+      "Semestre": "8"
+    },
+    {
+      "id": 8467985116,
+      "nombre": "Mi numero 5",
+      "Apellido": "Entero",
+      "Carrera": "Ing. Matematicas",
+      "Semestre": "7"
+    },
+    {
+      "id": 32302021564,
+      "nombre": "Judy",
+      "Apellido": "Galgo",
+      "Carrera": "Docencia Infantil",
+      "Semestre": "9"
+    },
+    {
+      "id": 9898300145,
+      "nombre": "Roxana",
+      "Apellido": "Mendoza",
+      "Carrera": "Docencia Infantil",
+      "Semestre": "9"
+    },
+    {
+      "id": 7853694321,
+      "nombre": "Eydan",
+      "Apellido": "Vera",
+      "Carrera": "Programador",
+      "Semestre": "1"
+    }
+  ],
+  "Institucion": [
+    {
+      "id": 1,
+      "Establecimiento": "Universidad tecnica de manabi",
+      "Pais": "Ecuador"
+    },
+    {
+      "id": 2,
+      "Establecimiento": "Universidad tecnica de Filipinas",
+      "Pais": "Filipinas"
+    },
+    {
+      "id": 3,
+      "Establecimiento": "Universidad tecnica de Massachussets",
+      "Pais": "EE.UU"
+    },
+    {
+      "id": 4,
+      "Establecimiento": "Universidad Autonoma Industrial",
+      "Pais": "Ecuador"
+    }
+  ]
+}

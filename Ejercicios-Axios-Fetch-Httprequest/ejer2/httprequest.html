@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Ajax</title>
+
+    <style>
+        html {
+          box-sizing: border-box;
+          font-family: sans-serif;
+          font-size: 16px;
+        }
+    
+        *,
+        *:before,
+        *:after {
+          box-sizing: inherit;
+        }
+    
+        body {
+          margin: 0;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+        }
+    
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+    
+        main {
+          flex-grow: 1;
+        }
+    
+        .container {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 992px;
+        }
+    
+        .header {
+          padding: .5rem;
+          background-color: antiquewhite;
+        }
+    
+        .header-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+    
+        .logo img {
+          width: 3rem;
+          height: auto;
+        }
+    
+        .menu {
+          display: flex;
+          justify-content: space-between;
+          font-size: 115%;
+        }
+    
+        .menu a {
+          color: chocolate;
+          padding: 0 1vw;
+          transition: all .3s ease-in-out;
+        }
+    
+        .menu a:hover {
+          opacity: .75;
+        }
+    </style>
+
+      <script src="./includehtml.js"></script>
+</head>
+<body>
+
+  <div data-include="./sitios/headers.html"></div>
+
+  <main class="container"></main>
+
+  <div data-include="./sitios/footer.html"></div>
+
+  <script>
+
+    /* **********     Curso JavaScript: 122. Ejercicios AJAX - APIs: Sitio web con AJAX - #jonmircha     ********** */
+
+    const docu = document
+    
+    //aqui vamos a mostrar el contenido
+    let $main = docu.querySelector('main')
+
+
+    //flujo
+    const obtenerTodo = (opciones) =>{
+        
+        let {url, exito, error} = opciones
+
+        const xhr = new XMLHttpRequest()
+
+        xhr.addEventListener("readystatechange", element =>{
+
+            if(xhr.readyState !== 4)return
+
+            if (xhr.status >= 200 && xhr.status < 300) {
+                
+                //responseText es el html de xhr
+                let html = xhr.responseText
+                exito(html)
+            } 
+            else {
+                let messa = xhr.statusText || "Error"
+                error(`Error ${xhr.status} / Info:${messa}`)
+            }
+        })
+
+        xhr.open("GET", url)
+        xhr.setRequestHeader("Content-type", "text/html; charset=utf-8")
+        xhr.send()
+    }
+
+
+    //pagina por defecto
+    docu.addEventListener('DOMContentLoaded', element =>{
+        obtenerTodo({
+            url: "sitios/home.html",
+            exito: (html) => $main.innerHTML = html,
+            error: (er) => $main.innerHTML = `<h1>${er}</h1>`
+        })
+    })
+    
+    //dinamicamente
+    docu.addEventListener('click', element =>{
+
+        if (element.target.matches('.menu a')) {
+            element.preventDefault()
+
+            //console.log(element.target) // me trae <a href=""></a>
+
+            obtenerTodo({
+            url: element.target.href, //obtenme el href cuando haga click
+            exito: (html) => $main.innerHTML = html,
+            error: (er) => $main.innerHTML = `<h1>${er}</h1>`
+        })
+
+        }
+    })
+
+  </script>
+
+</body>
+</html>

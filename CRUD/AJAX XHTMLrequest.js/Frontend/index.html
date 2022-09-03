@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD API REST AJAX XHTMLrequest</title>
+</head>
+
+<body>
+
+  <h1>CRUD API REST XHTMLrequest</h1>
+
+  <section class="crud">
+
+        <article>
+
+                <h2 class="crud-title">Agregar Estudiante</h2>
+
+                <form class="crud-form">
+
+                    <!--<input type="number" name="input-id" placeholder="ingrese su cedula">-->
+                  
+                    <input type="text" name="inputnombre" placeholder="nombre" required>
+                    <br>
+                    <br>
+                    <input type="text" name="inputapellido" placeholder="apellido" required>
+                    <br>
+                    <br>
+                    <input type="text" name="inputcarrera" placeholder="carrera" required>
+                    <br>
+                    <br>
+                    <input type="text" name="inputsemestre" placeholder="semestre" required>
+                    <br>
+                    <br>
+
+                    <input type="submit" value="Enviar">
+
+                    <!-- no tiene value es decir su value esta vacio -->
+                    <input type="hidden" name="oculto">
+
+                </form>
+
+        </article>
+
+    <article>
+
+        <h2>Ver Estudiantes</h2>
+
+            <table class="crud-table">
+
+                    <thead>
+                        <tr>
+                            
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Carrera</th>
+                            <th>Semestre</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="mostrarTabla">
+                    
+                    </tbody>
+                
+            </table>
+
+    </article>
+
+  </section>
+
+  <template id="crud-template">
+
+      <tr>
+          
+          <td class="nombre"></td>
+          <td class="apellido"></td>
+          <td class="carrera"></td>
+          <td class="semestre"></td>
+          <td>
+            <button class="edit">Editar</button>
+            <button class="delete">Eliminar</button>
+          </td>
+      </tr>
+  </template>
+
+  <br>
+  <br>
+  <footer>
+    © 2022 GitHub, Inc.
+  </footer>
+
+  <script src="XMLHTTPrequest.js"></script>
+</body>
+
+</html>

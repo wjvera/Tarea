@@ -1,0 +1,89 @@
+{
+  "Estudiante": [
+    {
+      "id": 1,
+      "Nombre": "Diego",
+      "Apellido": "Vera",
+      "Carrera": "Ing. Sistemas",
+      "Semestre": "8"
+    },
+    {
+      "id": 3,
+      "Nombre": "Judy",
+      "Apellido": "Galgo",
+      "Carrera": "Docencia Infantil",
+      "Semestre": "9"
+    },
+    {
+      "id": 5,
+      "Nombre": "Eydan",
+      "Apellido": "Vera",
+      "Carrera": "Programador",
+      "Semestre": "1"
+    },
+    {
+      "Nombre": "lissette",
+      "Apellido": "pinargote",
+      "Carrera": "ing. sistemas",
+      "Semestre": "8",
+      "id": 6
+    },
+    {
+      "Nombre": "jean",
+      "Apellido": "ramos",
+      "Carrera": "ing. mineria",
+      "Semestre": "9",
+      "id": 7
+    },
+    {
+      "Nombre": "pablo",
+      "Apellido": "velez",
+      "Carrera": "ing. sistemas",
+      "Semestre": "9",
+      "id": 8
+    },
+    {
+      "Nombre": "Odalis",
+      "Apellido": "Tierra",
+      "Carrera": "ing. en dos",
+      "Semestre": "5",
+      "id": 9
+    },
+    {
+      "Nombre": "joselyn",
+      "Apellido": "bravo",
+      "Carrera": "ing. industrial",
+      "Semestre": "7",
+      "id": 10
+    },
+    {
+      "Nombre": "Erwin",
+      "Apellido": "Zurita",
+      "Carrera": "social",
+      "Semestre": "8",
+      "id": 11
+    }
+  ],
+  "Institucion": [
+    {
+      "id": 1,
+      "Establecimiento": "Universidad tecnica de manabi",
+      "Pais": "Ecuador"
+    },
+    {
+      "id": 2,
+      "Establecimiento": "Universidad tecnica de Filipinas",
+      "Pais": "Filipinas"
+    },
+    {
+      "id": 3,
+      "Establecimiento": "Universidad tecnica de Massachussets",
+      "Pais": "EE.UU"
+    },
+    {
+      "id": 4,
+      "Establecimiento": "Universidad Autonoma Industrial",
+      "Pais": "Ecuador"
+    }
+  ]
+}
